@@ -1113,28 +1113,33 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
 }
 
 .footer-top {
     padding: 5rem 0 3rem;
     display: grid;
-    grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
     gap: 3.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    justify-content: center;
 }
 
 .footer-logo {
     margin-bottom: 1.5rem;
+    justify-content: center;
 }
 
 .footer-desc {
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
+    max-width: 450px;
     line-height: 1.6;
 }
 
 .footer-socials {
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 .social-link {
@@ -1165,13 +1170,15 @@ footer {
     margin-bottom: 2rem;
     position: relative;
     padding-bottom: 0.75rem;
+    text-align: center;
 }
 
 .footer-heading::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 30px;
     height: 2px;
     background-color: var(--accent-gold);
@@ -1179,6 +1186,9 @@ footer {
 
 .footer-links {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-links li {
@@ -1189,6 +1199,7 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
 }
 
@@ -1199,15 +1210,17 @@ footer {
 
 .footer-contact-item {
     display: flex;
-    gap: 0.75rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
     margin-bottom: 1.25rem;
-    align-items: flex-start;
 }
 
 .footer-contact-icon {
     color: var(--accent-gold);
-    font-size: 1rem;
-    margin-top: 3px;
+    font-size: 1.1rem;
+    margin-top: 0;
 }
 
 .footer-contact-text h6 {
@@ -1268,14 +1281,16 @@ footer {
 .footer-bottom {
     padding: 2rem 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 0.8rem;
 }
 
 .footer-bottom-links {
     display: flex;
     gap: 1.5rem;
+    justify-content: center;
 }
 
 .footer-bottom-links a:hover {
@@ -1886,7 +1901,7 @@ textarea.form-input {
         gap: 3rem;
     }
     .footer-top {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 3rem;
     }
     .contact-layout {
@@ -1909,6 +1924,9 @@ textarea.form-input {
     .grid-3 {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    .grid-4 {
+        grid-template-columns: 1fr;
     }
     .section-title {
         font-size: 2rem;
@@ -2048,5 +2066,52 @@ textarea.form-input {
     }
     .service-detail-image {
         height: 260px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-padding {
+        padding: 3.5rem 0;
+    }
+    .stats-banner {
+        margin-top: -2rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .hero-title {
+        font-size: 2.1rem;
+    }
+    .inner-hero-title {
+        font-size: 2rem;
+    }
+    .hero-desc {
+        font-size: 1rem;
+        margin-bottom: 1.75rem;
+    }
+    .port-info-card {
+        padding: 1.75rem 1.25rem;
+        min-height: auto;
+    }
+    .port-info-title {
+        font-size: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .contact-form-card {
+        padding: 1.5rem 1.25rem;
+    }
+    .contact-form-title {
+        font-size: 1.5rem;
+    }
+    .map-iframe-wrapper {
+        height: 300px;
     }
 }
