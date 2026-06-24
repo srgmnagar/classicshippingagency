@@ -1684,6 +1684,15 @@ textarea.form-input {
     justify-content: flex-end;
 }
 
+@media (max-width: 768px) {
+    .form-submit-row {
+        justify-content: center;
+    }
+    .form-submit-row .btn {
+        width: 100%;
+    }
+}
+
 /* Success Modal */
 .modal-overlay {
     position: fixed;
@@ -1937,12 +1946,52 @@ textarea.form-input {
     .hero-desc {
         font-size: 1.1rem;
     }
+    .hero-content {
+        text-align: center;
+        max-width: 100%;
+    }
     .hero-btns {
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
+    }
+    .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
     }
     .btn {
         width: 100%;
+        justify-content: center;
+    }
+    
+    /* Inner hero centering */
+    .inner-hero {
+        text-align: center;
+    }
+    .inner-breadcrumbs {
+        justify-content: center;
+    }
+    
+    /* Badge & subtitle centering */
+    .badge {
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section-subtitle {
+        text-align: center;
+    }
+    
+    /* About preview centering */
+    .about-preview-content {
+        text-align: center;
+    }
+    .about-key-features {
+        grid-template-columns: 1fr;
+    }
+    .feature-bullet {
+        text-align: left;
     }
     
     /* Navigation Hamburger */
@@ -2023,6 +2072,12 @@ textarea.form-input {
     .cta-action {
         width: 100%;
         flex-direction: column;
+        align-items: center;
+    }
+    .cta-action .btn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
     }
     
     .footer-top {
