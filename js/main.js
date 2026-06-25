@@ -96,7 +96,7 @@ const portData = {
         state: 'Gujarat',
         role: 'Head Office',
         roleType: 'head',
-        phone: '+91-9924455228',
+        phone: '+91-9714055300',
         email: 'info@classicshippingagency.com',
         description: 'Our corporate headquarters, serving the historical Gulf of Khambhat and managing custom clearances and shipping agency networks across all major Indian ports since 1998.'
     },
@@ -105,7 +105,7 @@ const portData = {
         state: 'Gujarat',
         role: 'Branch Office',
         roleType: 'branch',
-        phone: '+91-9924455228',
+        phone: '+91-9714055300',
         email: 'info@classicshippingagency.com',
         description: 'Direct operational branch at India\'s first private-sector port, specializing in efficient container handling, customs clearing, liquid bulk husbandry, and multi-modal logistics.'
     },
@@ -114,7 +114,7 @@ const portData = {
         state: 'Gujarat',
         role: 'Operational Port',
         roleType: 'operational',
-        phone: '+91-9924455228',
+        phone: '+91-9714055300',
         email: 'info@classicshippingagency.com',
         description: 'Operations at India\'s largest private commercial port. We coordinate rapid dry bulk and container bookings, clearing massive importing and exporting cargos with full regulatory compliance.'
     },
@@ -123,7 +123,7 @@ const portData = {
         state: 'Gujarat',
         role: 'Operational Port',
         roleType: 'operational',
-        phone: '+91-9924455228',
+        phone: '+91-9714055300',
         email: 'info@classicshippingagency.com',
         description: 'Handling vessels at India\'s leading hub for dry cargo and liquid bulk. We manage shipping agency services, port clearances, bunkering, and customs clearance protocols.'
     },
@@ -132,7 +132,7 @@ const portData = {
         state: 'Maharashtra',
         role: 'Operational Port',
         roleType: 'operational',
-        phone: '+91-9924455228',
+        phone: '+91-9714055300',
         email: 'info@classicshippingagency.com',
         description: 'Active operations coordinating container booking, customs processing, and door-to-door multimodal transportation from India\'s premier container gateway.'
     },
@@ -141,7 +141,7 @@ const portData = {
         state: 'Kerala',
         role: 'Operational Port',
         roleType: 'operational',
-        phone: '+91-9924455228',
+        phone: '+91-9714055300',
         email: 'info@classicshippingagency.com',
         description: 'Managing bunkering logistics, customs clearance, and container shipping agency services at the strategic international transshipment terminal on India\'s southern coast.'
     },
@@ -150,7 +150,7 @@ const portData = {
         state: 'Tamil Nadu',
         role: 'Operational Port',
         roleType: 'operational',
-        phone: '+91-9924455228',
+        phone: '+91-9714055300',
         email: 'info@classicshippingagency.com',
         description: 'Coordinating automotive logistics, bulk cargo agency, and custom clearance procedures for major importers and exporters in South India.'
     },
@@ -159,7 +159,7 @@ const portData = {
         state: 'Andhra Pradesh',
         role: 'Operational Port',
         roleType: 'operational',
-        phone: '+91-9924455228',
+        phone: '+91-9714055300',
         email: 'info@classicshippingagency.com',
         description: 'Handling minerals, ores, coal, and heavy industrial cargo. Providing robust cargo coordination, custom house agency, and vessel husbandry.'
     },
@@ -168,7 +168,7 @@ const portData = {
         state: 'West Bengal',
         role: 'Operational Port',
         roleType: 'operational',
-        phone: '+91-9924455228',
+        phone: '+91-9714055300',
         email: 'info@classicshippingagency.com',
         description: 'Serving East India and landlocked neighboring regions. We handle inland waterway integration, custom clearances, container services, and vessel logistics.'
     }
@@ -184,9 +184,6 @@ function initPortMap() {
     const titleEl = infoCard.querySelector('.port-info-title-text');
     const badgeEl = infoCard.querySelector('.port-info-badge');
     const stateEl = infoCard.querySelector('.port-info-state');
-    const descEl = infoCard.querySelector('.port-info-desc');
-    const phoneEl = infoCard.querySelector('.port-info-phone');
-    const emailEl = infoCard.querySelector('.port-info-email');
 
     function updatePortInfo(portId) {
         const data = portData[portId];
@@ -200,9 +197,6 @@ function initPortMap() {
         // Update card content directly
         if (titleEl) titleEl.textContent = data.name;
         if (stateEl) stateEl.textContent = `${data.state}, India`;
-        if (descEl) descEl.textContent = data.description;
-        if (phoneEl) phoneEl.textContent = data.phone;
-        if (emailEl) emailEl.textContent = data.email;
 
         // Update Role Badge
         if (badgeEl) {
